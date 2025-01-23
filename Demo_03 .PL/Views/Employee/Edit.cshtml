@@ -1,0 +1,34 @@
+﻿@model EmployeeViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1 class="btn-outline-warning rounded">Edit Employee Information </h1>
+<h2 class="alert-link">Employee Name: @Model.Name </h2>
+
+
+<form asp-action="Edit" method="post" enctype="multipart/form-data">
+    @*Go To Edit that work with HTTPPOST*@
+
+
+    @* Using Partial View => CreateEditPartialView  *@
+
+    <partial name="PartialViews/CreateEditPartialView" />
+
+   
+    <input type="submit" name="Save" value="Save" class="btn-primary" />              @*Submit*@
+
+    <a asp-action="Index" asp-controller="Employee">| Back To List</a>  @*Back To List*@
+
+</form>
+
+@* Using Partial View => CreateEditPartialView  *@
+
+
+
+@section ScriptSectionValidation {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+

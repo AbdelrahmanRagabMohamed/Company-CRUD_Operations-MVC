@@ -1,0 +1,28 @@
+﻿
+@model EmployeeViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<h1>Add New Employee</h1>
+
+
+<form asp-action="Create" method="post"  enctype="multipart/form-data">
+
+    <partial name="PartialViews/CreateEditPartialView" />
+
+    <input type="submit" value="Submit" class="btn btn-primary" />
+    <a asp-action="Index" asp-controller="Employee" class="bt btn-light">| Back To List</a>  @*Back To List*@
+
+</form>
+
+
+
+@* Using Partial View => CreateEditPartialView  *@
+
+@section ScriptSectionValidation {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+

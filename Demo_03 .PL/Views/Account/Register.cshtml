@@ -1,0 +1,50 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/AuthLayout.cshtml";
+}
+
+<div asp-validation-summary="All" class="text-danger"></div>
+<div class="main-agileinfo">
+    <div class="agileits-top">
+        <form asp-action="Register">
+
+            <input class="text" asp-for="FName" placeholder="Your First Name" required="">
+            <span asp-validation-for="FName" class="text-danger"></span>
+            <br />
+
+            <input class="text" asp-for="LName" placeholder="Your Last Name" required="">
+            <span asp-validation-for="LName" class="text-danger"></span>
+            <br />
+
+            <input class="text" asp-for="Email" placeholder="Email" required="">
+            <span asp-validation-for="Email" class="text-danger"></span>
+            <br />
+
+            <input class="text" asp-for="Password" placeholder="Password" required="">
+            <span asp-validation-for="Password" class="text-danger"></span>
+            <br />
+
+            <input class="text" asp-for="ConfirmPassword" placeholder="Confirm Password" required="">
+            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            <br />
+
+
+            <div class="wthree-text">
+                <label class="anim">
+                    <input asp-for="IAgree" class="checkbox">
+                    <span>I Agree To The Terms & Conditions</span>
+                </label>
+                <div class="clear"> </div>
+            </div>
+            <input type="submit" value="SIGNUP">
+        </form>
+        <p>Do you have an Account? <a asp-action="Login"> Login Now!</a></p>
+    </div>
+</div>
+
+@section ValidationScriptSection {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+} 

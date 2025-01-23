@@ -1,0 +1,31 @@
+﻿@model UserViewModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Update User Info:</h1>
+
+<form asp-action="Edit">
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Fname"></label>
+        <input class="form-control" asp-for="Fname" />
+    </div>
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Lname"></label>
+        <input class="form-control" asp-for="Lname" />
+    </div>
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="PhoneNumber"></label>
+        <input class="form-control" asp-for="PhoneNumber" />
+    </div>
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Roles"></label>
+        <input class="form-control" asp-for="Roles" value="" />
+    </div>
+
+    <input type="submit" value="Save" class="btn btn-warning" />
+    <a asp-action="Index" asp-controller="User">| Back To List</a>
+</form>

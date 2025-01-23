@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4 welcome-text" aria-label="Welcome">Welcome</h1>
+    <p></p>
+</div>
+
+<!-- Add the company description here -->
+<div class="company-description">
+    <p>
+        <strong>We</strong> are a leading provider of innovative technology solutions, specializing in software development, web and mobile apps, AI, and data analytics. We deliver customized, secure, and efficient solutions to help businesses thrive in a competitive world.
+    </p>
+</div>
+
+<style>
+    /* تنسيق كلمة Welcome */
+    .welcome-text {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* خط أنيق */
+        font-size: 4rem; /* حجم كبير */
+        background: linear-gradient(45deg, #6a11cb, #2575fc); /* تدرج لوني */
+        -webkit-background-clip: text; /* يجعل التدرج يظهر على النص */
+        -webkit-text-fill-color: transparent; /* يجعل النص شفافًا لظهور التدرج */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* ظل للنص */
+        animation: fadeIn 2s ease-in-out, glow 2s infinite alternate; /* تأثيرات الظهور والتلألؤ */
+    }
+
+    /* تعريف تأثير الظهور */
+    @@keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* تعريف تأثير التلألؤ */
+    @@keyframes glow {
+        from {
+            filter: brightness(100%);
+        }
+
+        to {
+            filter: brightness(150%);
+        }
+    }
+
+    /* تنسيق النبذة */
+    .company-description {
+        margin-top: 70px; /* المسافة من الأعلى */
+        margin-left: 40px;
+        font-style: italic;
+        font-family: Arial, sans-serif;
+        font-size: 1.5rem; /* حجم الخط أكبر قليلاً */
+        line-height: 1.6; /* زيادة المسافة بين الأسطر */
+    }
+
+    /* تنسيق للشاشات الصغيرة */
+    @@media (max-width: 768px) {
+        .welcome-text {
+            font-size: 2.5rem; /* حجم أصغر للشاشات الصغيرة */
+        }
+
+        .company-description {
+            font-size: 1.2rem; /* حجم أصغر قليلاً للشاشات الصغيرة */
+            margin-top: 40px; /* تقليل المسافة من الأعلى للشاشات الصغيرة */
+            margin-left: 20px;
+        }
+    }
+</style>

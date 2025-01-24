@@ -104,13 +104,13 @@ namespace Demo_03_.PL.Controllers
         [HttpGet]  // For Get View
         public async Task<IActionResult> Edit(int? id)
         {
-            //if (id is null)
-            //    return BadRequest();
-            //var departement = _unitOfWork.DepartementRepository.GetById(id.Value);
-            //if (departement is null)
-            //    return NotFound();
-            //return View(departement);
-            //return Details(id); // invalid because it will too return view with the same name of action (Details)
+           ///if (id is null)
+           ///    return BadRequest();
+           ///var departement = _unitOfWork.DepartementRepository.GetById(id.Value);
+           ///if (departement is null)
+           ///    return NotFound();
+           ///return View(departement);
+           ///return Details(id); // invalid because it will too return view with the same name of action (Details)
 
             return await Details(id, "Edit"); // return Right View (Edit)
 

@@ -124,7 +124,7 @@ namespace Demo_03_.PL.Controllers
         #endregion
 
 
-        // Only Admins have the permission to access Users and Roles 
+        // Only Admins have the permission to access Users and Roles .
 
         #region Access Denied
         public IActionResult AccessDenied()

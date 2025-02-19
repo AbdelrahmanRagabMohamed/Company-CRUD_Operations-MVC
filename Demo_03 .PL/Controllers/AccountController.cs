@@ -3,7 +3,6 @@ using Demo_03_.PL.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System.Threading.Tasks;
 
 namespace Demo_03_.PL.Controllers
@@ -122,7 +121,6 @@ namespace Demo_03_.PL.Controllers
             return RedirectToAction(nameof(Login));
         }
         #endregion
-
 
         // Only Admins have the permission to access Users and Roles .
 
